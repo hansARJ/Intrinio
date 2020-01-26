@@ -11,7 +11,8 @@
 		4DCD37F5DD4DDD262BFC5514 /* Pods_RelearningIOS_RelearningIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7B8CD42F18406DAC28D7B5 /* Pods_RelearningIOS_RelearningIOSUITests.framework */; };
 		7AFB3D3FA03BD5FFCEE7BB3F /* Pods_RelearningIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137BD9C333400FE42373F45C /* Pods_RelearningIOSTests.framework */; };
 		B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430923DD615F00CA6025 /* Intrinio.swift */; };
-		B818430C23DD616600CA6025 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430B23DD616600CA6025 /* Manager.swift */; };
+		B818430C23DD616600CA6025 /* IntrinioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430B23DD616600CA6025 /* IntrinioManager.swift */; };
+		B818431023DE408700CA6025 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430F23DE408700CA6025 /* RequestManager.swift */; };
 		B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175523DD291200A49DA5 /* AppDelegate.swift */; };
 		B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175723DD291200A49DA5 /* SceneDelegate.swift */; };
 		B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175923DD291200A49DA5 /* ContentView.swift */; };
@@ -46,7 +47,8 @@
 		2495628B9D863F4291DDB0E1 /* Pods_RelearningIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RelearningIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C17CAB6502C09D9BA96FA1 /* Pods-RelearningIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOS.debug.xcconfig"; path = "Target Support Files/Pods-RelearningIOS/Pods-RelearningIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B818430923DD615F00CA6025 /* Intrinio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intrinio.swift; sourceTree = "<group>"; };
-		B818430B23DD616600CA6025 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		B818430B23DD616600CA6025 /* IntrinioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinioManager.swift; sourceTree = "<group>"; };
+		B818430F23DE408700CA6025 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B89E175223DD291200A49DA5 /* RelearningIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelearningIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E175523DD291200A49DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89E175723DD291200A49DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,10 +120,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B818430D23DD617500CA6025 /* Intrinio */ = {
+		B818430D23DD617500CA6025 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B818430B23DD616600CA6025 /* Manager.swift */,
+				B818430E23DE406F00CA6025 /* Intrinio */,
+				B818430F23DE408700CA6025 /* RequestManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B818430E23DE406F00CA6025 /* Intrinio */ = {
+			isa = PBXGroup;
+			children = (
+				B818430B23DD616600CA6025 /* IntrinioManager.swift */,
 				B818430923DD615F00CA6025 /* Intrinio.swift */,
 			);
 			path = Intrinio;
@@ -152,7 +163,7 @@
 		B89E175423DD291200A49DA5 /* RelearningIOS */ = {
 			isa = PBXGroup;
 			children = (
-				B818430D23DD617500CA6025 /* Intrinio */,
+				B818430D23DD617500CA6025 /* Data */,
 				B89E175523DD291200A49DA5 /* AppDelegate.swift */,
 				B89E175723DD291200A49DA5 /* SceneDelegate.swift */,
 				B89E175923DD291200A49DA5 /* ContentView.swift */,
@@ -432,8 +443,9 @@
 				B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */,
 				B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */,
 				B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */,
+				B818431023DE408700CA6025 /* RequestManager.swift in Sources */,
 				B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */,
-				B818430C23DD616600CA6025 /* Manager.swift in Sources */,
+				B818430C23DD616600CA6025 /* IntrinioManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

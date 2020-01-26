@@ -14,3 +14,7 @@ func printDebug(_ msg: Any) {
         print("DEBUG: \(msg)")
     #endif
 }
+
+extension Notification.Name {
+    static let didReceiveTickData = Notification.Name("didReceiveTickData")
+}

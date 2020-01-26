@@ -26,11 +26,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             printDebug("Intrio - Error Fetching Apple")
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.didReceiveTickData(_:)), name: Notification.Name.didReceiveTickData, object: nil)
         intrinioManager.startTicking(company: targetCompany)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             intrinioManager.stopTicking()
         }
         return true
+    }
+    
+    @objc func didReceiveTickData(_ notification: Notification) {
+        guard let data = notification.userInfo as? [String: Any] else {
+            printDebug("Error - Ticker notification no data")
+            return
+        }
+        
+        guard let company = data["company"] as? Intrinio.CompanyType, let value = data["value"] as? Double else {
+            printDebug("Error - Ticker notification failed to parse")
+            return
+        }
+        
+        printDebug("Intrinio - Tick \(company.rawValue) $\(value)")
     }
 
     // MARK: UISceneSession Lifecycle

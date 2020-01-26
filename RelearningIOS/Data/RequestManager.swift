@@ -24,10 +24,19 @@ class RequestManager {
     }
     
     // Mark - Get
-    func getJSONCodable<T:Codable>(url: String, query: String?) -> Promise<T> {
+    func getJSONCodable<T:Codable>(url: String, query: String?, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy?, dateFormat: String?) -> Promise<T> {
         return get(url: url, query: query).map { data in
             let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            if (keyDecodingStrategy != nil) {
+                decoder.keyDecodingStrategy = keyDecodingStrategy!
+            }
+            
+            if (dateFormat != nil) {
+                let formatter = DateFormatter()
+                formatter.dateFormat = dateFormat
+                decoder.dateDecodingStrategy = .formatted(formatter)
+            }
             return try decoder.decode(T.self, from: data)
         }
     }

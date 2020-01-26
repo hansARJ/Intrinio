@@ -21,7 +21,7 @@ extension Intrinio {
             let url = "\(Self.BASE_URL)\(company.rawValue)"
             let query = "api_key=\(Self.API_KEY)"
             
-            return getJSONCodable(url: url, query: query)
+            return getJSONCodable(url: url, query: query, keyDecodingStrategy: .convertFromSnakeCase, dateFormat: "yyyy-MM-dd")
         }
     }
 }

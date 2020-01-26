@@ -18,8 +18,8 @@ extension Intrinio {
         let employees: Int?
         let entityLegalForm: String?
         let entityStatus: String?
-        let firstFundamentalDate: String?
-        let firstStockPriceData: String?
+        let firstFundamentalDate: Date?
+        let firstStockPriceData: Date?
         let hqAddress1: String?
         let hqAddress2: String?
         let hqAddressCity: String?
@@ -31,9 +31,9 @@ extension Intrinio {
         let incState: String?
         let industryCategory: String?
         let industryGroup: String?
-        let lastFundamentalDate: String?
-        let lastStockPriceDate: String?
-        let latestFilingDate: String?
+        let lastFundamentalDate: Date?
+        let lastStockPriceDate: Date?
+        let latestFilingDate: Date?
         let legalName: String?
         let lei: String?
         let longDescription: String?

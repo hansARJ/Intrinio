@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let intrinioManager = Intrinio.Manager()
+        
+        intrinioManager.fetchData(company: Intrinio.CompanySymbol.apple).done { data in
+            print("SUCCESS!")
+            print(data);
+        }.catch { error in
+            print("ERROR!")
+            print(error)
+        }
         return true
     }
 

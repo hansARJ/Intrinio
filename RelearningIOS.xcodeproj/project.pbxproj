@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07910884D916361DFF28C451 /* Pods_RelearningIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2495628B9D863F4291DDB0E1 /* Pods_RelearningIOS.framework */; };
 		4DCD37F5DD4DDD262BFC5514 /* Pods_RelearningIOS_RelearningIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7B8CD42F18406DAC28D7B5 /* Pods_RelearningIOS_RelearningIOSUITests.framework */; };
 		7AFB3D3FA03BD5FFCEE7BB3F /* Pods_RelearningIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137BD9C333400FE42373F45C /* Pods_RelearningIOSTests.framework */; };
+		B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430923DD615F00CA6025 /* Intrinio.swift */; };
+		B818430C23DD616600CA6025 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430B23DD616600CA6025 /* Manager.swift */; };
 		B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175523DD291200A49DA5 /* AppDelegate.swift */; };
 		B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175723DD291200A49DA5 /* SceneDelegate.swift */; };
 		B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175923DD291200A49DA5 /* ContentView.swift */; };
@@ -43,6 +45,8 @@
 		20C0C87774C54BEAB47265E1 /* Pods-RelearningIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOS.release.xcconfig"; path = "Target Support Files/Pods-RelearningIOS/Pods-RelearningIOS.release.xcconfig"; sourceTree = "<group>"; };
 		2495628B9D863F4291DDB0E1 /* Pods_RelearningIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RelearningIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C17CAB6502C09D9BA96FA1 /* Pods-RelearningIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOS.debug.xcconfig"; path = "Target Support Files/Pods-RelearningIOS/Pods-RelearningIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B818430923DD615F00CA6025 /* Intrinio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intrinio.swift; sourceTree = "<group>"; };
+		B818430B23DD616600CA6025 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		B89E175223DD291200A49DA5 /* RelearningIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelearningIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E175523DD291200A49DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89E175723DD291200A49DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 				EF73BEEA06E24FC919C2E743 /* Pods-RelearningIOSTests.debug.xcconfig */,
 				1D882C83A1636F2A69BA04A4 /* Pods-RelearningIOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,6 +116,15 @@
 				137BD9C333400FE42373F45C /* Pods_RelearningIOSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B818430D23DD617500CA6025 /* Intrinio */ = {
+			isa = PBXGroup;
+			children = (
+				B818430B23DD616600CA6025 /* Manager.swift */,
+				B818430923DD615F00CA6025 /* Intrinio.swift */,
+			);
+			path = Intrinio;
 			sourceTree = "<group>";
 		};
 		B89E174923DD291200A49DA5 = {
@@ -140,6 +152,7 @@
 		B89E175423DD291200A49DA5 /* RelearningIOS */ = {
 			isa = PBXGroup;
 			children = (
+				B818430D23DD617500CA6025 /* Intrinio */,
 				B89E175523DD291200A49DA5 /* AppDelegate.swift */,
 				B89E175723DD291200A49DA5 /* SceneDelegate.swift */,
 				B89E175923DD291200A49DA5 /* ContentView.swift */,
@@ -418,7 +431,9 @@
 			files = (
 				B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */,
 				B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */,
+				B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */,
 				B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */,
+				B818430C23DD616600CA6025 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "re-ios.RelearningIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -618,7 +633,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "re-ios.RelearningIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

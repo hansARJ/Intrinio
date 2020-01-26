@@ -16,14 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         printDebug("Intrio - Initializing Manager")
         let intrinioManager = Intrinio.Manager()
-        
+        let targetCompany = Intrinio.CompanyType.apple
         printDebug("Intrio - Fetching Apple")
-        intrinioManager.get(company: Intrinio.CompanySymbol.apple).done { data in
+        intrinioManager.get(company: targetCompany).done { data in
             printDebug(data);
             printDebug("Intrio - Successfully Fetched Apple")
         }.catch { error in
             printDebug(error)
             printDebug("Intrio - Error Fetching Apple")
+        }
+        
+        let intrinioFakeTicker = Intrinio.FakeTicker(company: targetCompany)
+        intrinioFakeTicker.startTicking()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            intrinioFakeTicker.stopTicking()
         }
         return true
     }

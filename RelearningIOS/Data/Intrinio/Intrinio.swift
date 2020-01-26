@@ -11,7 +11,7 @@ import Foundation
 struct Intrinio {
     private init() {}
     
-    enum CompanySymbol: String {
+    enum CompanyType: String {
         case apple = "AAPL"
     }
 }

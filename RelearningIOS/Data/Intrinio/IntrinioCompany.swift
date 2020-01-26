@@ -19,7 +19,7 @@ extension Intrinio {
         let entityLegalForm: String?
         let entityStatus: String?
         let firstFundamentalDate: Date?
-        let firstStockPriceData: Date?
+        let firstStockPriceDate: Date?
         let hqAddress1: String?
         let hqAddress2: String?
         let hqAddressCity: String?

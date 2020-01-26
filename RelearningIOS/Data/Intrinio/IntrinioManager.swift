@@ -17,7 +17,7 @@ extension Intrinio {
         override init() {
         }
         
-        func get(company: Intrinio.CompanySymbol) -> Promise<Intrinio.Company> {
+        func get(company: Intrinio.CompanyType) -> Promise<Intrinio.Company> {
             let url = "\(Self.BASE_URL)\(company.rawValue)"
             let query = "api_key=\(Self.API_KEY)"
             

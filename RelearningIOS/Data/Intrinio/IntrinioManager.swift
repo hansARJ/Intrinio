@@ -14,7 +14,22 @@ extension Intrinio {
         private static let BASE_URL = "https://api-v2.intrinio.com/companies/"
         private static let API_KEY = "OmM1MDhkZTIwZjYzM2ZlZDQ1ZWExMmQ0Nzg3NjJkNzQy"
         
+        private var ticker: FakeTicker? = nil
+        
         override init() {
+        }
+        
+        func startTicking(company: Intrinio.CompanyType) {
+            ticker?.stopTicking()
+            
+            let ticker = FakeTicker(company: company)
+            ticker.startTicking()
+            
+            self.ticker = ticker
+        }
+        
+        func stopTicking() {
+            ticker?.stopTicking()
         }
         
         func get(company: Intrinio.CompanyType) -> Promise<Intrinio.Company> {

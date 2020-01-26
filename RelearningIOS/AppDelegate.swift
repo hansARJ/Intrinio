@@ -26,10 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             printDebug("Intrio - Error Fetching Apple")
         }
         
-        let intrinioFakeTicker = Intrinio.FakeTicker(company: targetCompany)
-        intrinioFakeTicker.startTicking()
+        intrinioManager.startTicking(company: targetCompany)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            intrinioFakeTicker.stopTicking()
+            intrinioManager.stopTicking()
         }
         return true
     }

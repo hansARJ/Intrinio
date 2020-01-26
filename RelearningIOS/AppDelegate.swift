@@ -14,14 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        printDebug("Intrio - Initializing Manager")
         let intrinioManager = Intrinio.Manager()
         
+        printDebug("Intrio - Fetching Apple")
         intrinioManager.get(company: Intrinio.CompanySymbol.apple).done { data in
-            print("SUCCESS!")
-            print(data);
+            printDebug(data);
+            printDebug("Intrio - Successfully Fetched Apple")
         }.catch { error in
-            print("ERROR!")
-            print(error)
+            printDebug(error)
+            printDebug("Intrio - Error Fetching Apple")
         }
         return true
     }

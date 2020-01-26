@@ -17,11 +17,11 @@ extension Intrinio {
         override init() {
         }
         
-        func fetchData(company: Intrinio.CompanySymbol) -> Promise<Any> {
+        func get(company: Intrinio.CompanySymbol) -> Promise<Intrinio.Company> {
             let url = "\(Self.BASE_URL)\(company.rawValue)"
             let query = "api_key=\(Self.API_KEY)"
             
-            return getJSON(url: url, query: query)
+            return getJSONCodable(url: url, query: query)
         }
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 import PromiseKit
 
 class RequestManager {
+    // Mark - Enum
     enum RequestError: Error {
         case badUrl
         case badRequest
@@ -20,6 +21,15 @@ class RequestManager {
     
     enum MimeType: String {
         case json = "application/json"
+    }
+    
+    // Mark - Get
+    func getJSONCodable<T:Codable>(url: String, query: String?) -> Promise<T> {
+        return get(url: url, query: query).map { data in
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            return try decoder.decode(T.self, from: data)
+        }
     }
     
     func getJSON(url: String, query: String?) -> Promise<Any> {

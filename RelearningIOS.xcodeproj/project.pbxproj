@@ -21,6 +21,7 @@
 		B89E176223DD291400A49DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B89E176023DD291400A49DA5 /* LaunchScreen.storyboard */; };
 		B89E176D23DD291400A49DA5 /* RelearningIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E176C23DD291400A49DA5 /* RelearningIOSTests.swift */; };
 		B89E177823DD291400A49DA5 /* RelearningIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E177723DD291400A49DA5 /* RelearningIOSUITests.swift */; };
+		B8ABD76323DE462F00517874 /* IntrinioCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABD76223DE462F00517874 /* IntrinioCompany.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B89E177323DD291400A49DA5 /* RelearningIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RelearningIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E177723DD291400A49DA5 /* RelearningIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelearningIOSUITests.swift; sourceTree = "<group>"; };
 		B89E177923DD291400A49DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8ABD76223DE462F00517874 /* IntrinioCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinioCompany.swift; sourceTree = "<group>"; };
 		D032C21A6E8118DD3D8D635D /* Pods-RelearningIOS-RelearningIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOS-RelearningIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-RelearningIOS-RelearningIOSUITests/Pods-RelearningIOS-RelearningIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D09BE54FA0EB9579891DA838 /* Pods-RelearningIOS-RelearningIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOS-RelearningIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-RelearningIOS-RelearningIOSUITests/Pods-RelearningIOS-RelearningIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF73BEEA06E24FC919C2E743 /* Pods-RelearningIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelearningIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RelearningIOSTests/Pods-RelearningIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,8 +134,9 @@
 		B818430E23DE406F00CA6025 /* Intrinio */ = {
 			isa = PBXGroup;
 			children = (
-				B818430B23DD616600CA6025 /* IntrinioManager.swift */,
 				B818430923DD615F00CA6025 /* Intrinio.swift */,
+				B8ABD76223DE462F00517874 /* IntrinioCompany.swift */,
+				B818430B23DD616600CA6025 /* IntrinioManager.swift */,
 			);
 			path = Intrinio;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */,
 				B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */,
 				B818431023DE408700CA6025 /* RequestManager.swift in Sources */,
+				B8ABD76323DE462F00517874 /* IntrinioCompany.swift in Sources */,
 				B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */,
 				B818430C23DD616600CA6025 /* IntrinioManager.swift in Sources */,
 			);

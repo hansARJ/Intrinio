@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let intrinioManager = Intrinio.Manager()
         
-        intrinioManager.fetchData(company: Intrinio.CompanySymbol.apple).done { data in
+        intrinioManager.get(company: Intrinio.CompanySymbol.apple).done { data in
             print("SUCCESS!")
             print(data);
         }.catch { error in

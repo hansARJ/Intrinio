@@ -6,6 +6,7 @@ target 'RelearningIOS' do
   use_frameworks!
 
   # Pods for RelearningIOS
+  pod "PromiseKit", "~> 6.8"
 
   target 'RelearningIOSTests' do
     inherit! :search_paths

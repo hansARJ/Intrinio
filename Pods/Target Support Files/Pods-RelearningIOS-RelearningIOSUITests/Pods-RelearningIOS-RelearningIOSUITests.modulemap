@@ -1,0 +1,6 @@
+framework module Pods_RelearningIOS_RelearningIOSUITests {
+  umbrella header "Pods-RelearningIOS-RelearningIOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,10 +8,20 @@
 
 import Foundation
 
+enum printLevel: Int {
+    case important = 3
+    case detailed = 2
+    case common = 1
+    case spam = 0
+}
 
-func printDebug(_ msg: Any) {
+let GLOBAL_PRINT_LEVEL: printLevel = .common
+
+func printDebug(_ msg: Any, level: printLevel = .common) {
     #if DEBUG
-        print("DEBUG: \(msg)")
+        if level.rawValue >= GLOBAL_PRINT_LEVEL.rawValue {
+            print("DEBUG: \(msg)")
+        }
     #endif
 }
 

@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        printDebug("Intrio - Initializing Manager")
-        printDebug("Intrio - Fetching Apple")
+        printDebug("Intrinio - Initializing Manager")
+        printDebug("Intrinio - Fetching Apple")
         self.intrinioManager.get(company: targetCompany).done { data in
             printDebug(data);
-            printDebug("Intrio - Successfully Fetched Apple")
+            printDebug("Intrinio - Successfully Fetched Apple")
         }.catch { error in
             printDebug(error)
-            printDebug("Intrio - Error Fetching Apple")
+            printDebug("Intrinio - Error Fetching Apple")
         }
         
         self.intrinioManager.startTicking(company: targetCompany)

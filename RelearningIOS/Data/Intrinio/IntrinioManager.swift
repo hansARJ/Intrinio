@@ -17,6 +17,9 @@ extension Intrinio {
         private var ticker: FakeTicker? = nil
         
         override init() {
+            super.init()
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(Intrinio.Manager.didReceiveTickData(_:)), name: Notification.Name.didReceiveTickData, object: nil)
         }
         
         func startTicking(company: Intrinio.CompanyType) {
@@ -38,5 +41,21 @@ extension Intrinio {
             
             return getJSONCodable(url: url, query: query, keyDecodingStrategy: .convertFromSnakeCase, dateFormat: "yyyy-MM-dd")
         }
+    }
+}
+
+extension Intrinio.Manager {
+    @objc func didReceiveTickData(_ notification: Notification) {
+        guard let data = notification.userInfo as? [String: Any] else {
+            printDebug("Error - Ticker notification no data")
+            return
+        }
+        
+        guard let company = data["company"] as? Intrinio.CompanyType, let value = data["value"] as? Double else {
+            printDebug("Error - Ticker notification failed to parse")
+            return
+        }
+        
+        printDebug("Intrinio - Tick \(company.rawValue) $\(value)")
     }
 }

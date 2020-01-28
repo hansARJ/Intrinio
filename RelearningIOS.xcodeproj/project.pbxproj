@@ -13,6 +13,7 @@
 		B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430923DD615F00CA6025 /* Intrinio.swift */; };
 		B818430C23DD616600CA6025 /* IntrinioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430B23DD616600CA6025 /* IntrinioManager.swift */; };
 		B818431023DE408700CA6025 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818430F23DE408700CA6025 /* RequestManager.swift */; };
+		B840D5AD23DFC5B400CC2315 /* IntrinioLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840D5AC23DFC5B400CC2315 /* IntrinioLogger.swift */; };
 		B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175523DD291200A49DA5 /* AppDelegate.swift */; };
 		B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175723DD291200A49DA5 /* SceneDelegate.swift */; };
 		B89E175A23DD291200A49DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E175923DD291200A49DA5 /* ContentView.swift */; };
@@ -52,6 +53,7 @@
 		B818430923DD615F00CA6025 /* Intrinio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intrinio.swift; sourceTree = "<group>"; };
 		B818430B23DD616600CA6025 /* IntrinioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinioManager.swift; sourceTree = "<group>"; };
 		B818430F23DE408700CA6025 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B840D5AC23DFC5B400CC2315 /* IntrinioLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinioLogger.swift; sourceTree = "<group>"; };
 		B89E175223DD291200A49DA5 /* RelearningIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelearningIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E175523DD291200A49DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B89E175723DD291200A49DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B818430923DD615F00CA6025 /* Intrinio.swift */,
+				B840D5AC23DFC5B400CC2315 /* IntrinioLogger.swift */,
 				B8ABD76223DE462F00517874 /* IntrinioCompany.swift */,
 				B818430B23DD616600CA6025 /* IntrinioManager.swift */,
 				B8ACBE5223DE5490002DB181 /* IntrinioFakeTicker.swift */,
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8ABD76523DE4F9500517874 /* Global.swift in Sources */,
+				B840D5AD23DFC5B400CC2315 /* IntrinioLogger.swift in Sources */,
 				B89E175623DD291200A49DA5 /* AppDelegate.swift in Sources */,
 				B89E175823DD291200A49DA5 /* SceneDelegate.swift in Sources */,
 				B818430A23DD615F00CA6025 /* Intrinio.swift in Sources */,

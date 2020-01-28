@@ -11,15 +11,15 @@ import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static let TARGET_COMPANY: Intrinio.CompanyType = Intrinio.CompanyType.apple
     
     let intrinioManager: Intrinio.Manager = Intrinio.Manager()
-    let targetCompany: Intrinio.CompanyType = Intrinio.CompanyType.apple
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         printDebug("Intrinio - Initializing Manager")
         printDebug("Intrinio - Fetching Apple")
-        self.intrinioManager.get(company: targetCompany).done { data in
+        self.intrinioManager.get(company: Self.TARGET_COMPANY).done { data in
             printDebug(data);
             printDebug("Intrinio - Successfully Fetched Apple")
         }.catch { error in
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             printDebug("Intrinio - Error Fetching Apple")
         }
         
-        self.intrinioManager.startTicking(company: targetCompany)
+        self.intrinioManager.startTicking(company: Self.TARGET_COMPANY)
         return true
     }
 
